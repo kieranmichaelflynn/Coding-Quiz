@@ -1,6 +1,27 @@
 const questions = [
     {
-        title: "What is a method to improve search engine optimatisation for a website?",
+        title: "What is JavaScript?",
+        choices: [
+            {
+                title: "A written language within the CSS document",
+                isAns: false,
+            },
+            {
+                title: "An island in Indonesia",
+                isAns: false,
+            },
+            {
+                title: "A programming language adding web page behaviour",
+                isAns: true,
+            },
+            {
+                title: "A blend of coffee",
+                isAns: false,
+            }
+        ]
+    },
+    {
+        title: "How can you improve search engine optimatisation for a website?",
         choices: [
             {
                 title: "Increasing amount of links",
@@ -49,7 +70,7 @@ const questions = [
                 isAns: false,
             },
             {
-                title: "Hyper text markup language",
+                title: "Hyper Text Markup Language",
                 isAns: true,
             },
             {
@@ -57,7 +78,7 @@ const questions = [
                 isAns: false,
             },
             {
-                title: "Hyper test maker language",
+                title: "Hyper Test Maker Language",
                 isAns: false,
             }
         ]
@@ -84,10 +105,10 @@ const questions = [
         ]
     },
     {
-        title: "When was HTML 1.0 first released?",
+        title: "When was JavaScript first released?",
         choices: [
             {
-                title: "1993",
+                title: "1995",
                 isAns: true,
             },
             {
@@ -126,7 +147,7 @@ const questions = [
         ]
     },
     {
-        title: "How is commonly CSS used?",
+        title: "How is CSS commonly used?",
         choices: [
             {
                 title: "To add styles onto HTML elements",
@@ -147,7 +168,7 @@ const questions = [
         ]
     },
     {
-        title: "Reset.CSS documents should be listed beneath all other CSS documents",
+        title: "JavaScript links be listed at the top of the HTML document",
         choices: [
             {
                 title: "True",
@@ -157,27 +178,6 @@ const questions = [
                 title: "False",
                 isAns: true,
             },
-        ]
-    },
-    {
-        title: "What is JavaScript?",
-        choices: [
-            {
-                title: "A written language within the CSS document",
-                isAns: false,
-            },
-            {
-                title: "An island in Indonesia",
-                isAns: false,
-            },
-            {
-                title: "A programming language adding web page behaviour",
-                isAns: true,
-            },
-            {
-                title: "A blend of coffee",
-                isAns: false,
-            }
         ]
     },
     {
@@ -202,45 +202,24 @@ const questions = [
         ]
     },
     {
-        title: "What is a method to improve search engine optimatisation for a website?",
+        title: "What is a function?",
         choices: [
             {
-                title: "Increasing amount of links",
+                title: "A language",
                 isAns: false,
             },
             {
-                title: "Using prettier colours",
-                isAns: false,
-            },
-            {
-                title: "Increasing accessibilty for all users",
+                title: "A block of code designed to perform a particular task",
                 isAns: true,
             },
             {
-                title: "Removing alt text descriptions on images",
+                title: "Font-size required to activate a certain task",
+                isAns: false,
+            },
+            {
+                title: "An object",
                 isAns: false,
             }
         ]
-    },
-    {
-        title: "What is a method to improve search engine optimatisation for a website?",
-        choices: [
-            {
-                title: "Increasing amount of links",
-                isAns: false,
-            },
-            {
-                title: "Using prettier colours",
-                isAns: false,
-            },
-            {
-                title: "Increasing accessibilty for all users",
-                isAns: true,
-            },
-            {
-                title: "Removing alt text descriptions on images",
-                isAns: false,
-            }
-        ]
-    },
+    }
 ]

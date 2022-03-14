@@ -1,45 +1,46 @@
-const buttonStart = document.getElementById('button-start');
-const sectionQuestion = document.getElementById('section-questions');
+// Variables to be linked to the HTML
 const sectionLanding = document.getElementById('section-landing');
 const sectionTimer = document.getElementById('section-timer');
+const sectionQuestion = document.getElementById('section-questions');
 const sectionInitials = document.getElementById('section-initials');
+const sectionHighscore = document.getElementById('section-highscore');
 const spanHighScore = document.getElementById('span-final-highscore');
 const spanTime = document.getElementById('span-time');
 const questionTitle = document.getElementById('question-title');
 const questionChoices = document.getElementById('question-choices');
 const questionFeedback = document.getElementById('questions-feedback');
-const formHighscore = document.getElementById('form-highscore');
 const inputInitials = document.getElementById('input-initials');
-const sectionHighscore = document.getElementById('section-highscore');
+const formHighscore = document.getElementById('form-highscore');
+const ListHighScores = document.getElementById('list-high-scores');
+const buttonStart = document.getElementById('button-start');
 const buttonPlayAgain = document.getElementById('button-play-again');
 const ButtonClearHighscores = document.getElementById('button-clear-highscores');
-const ListHighScores = document.getElementById('list-high-scores');
+
 
 let timeRemaining = 60;
 let timerId = " ";
 
 let currentQuestionIndex = 0;
 
-spanTime.textContent = timeRemaining
 
 // When user clicks 'start' btn
-
 buttonStart.addEventListener('click', function (event) {
     // Show the questions
     sectionQuestion.classList.remove('hide')
-
+    
     // Hide the landing page
     sectionLanding.classList.add('hide')
-
-
-    //start timer
+    
+    
+    // Start timer and display time remaining
     startTimer();
+    spanTime.textContent = timeRemaining
 
     showQuestion(0);
 
 });
 
-
+// To display feedback after a choice is made
 function showFeedback(message, timeout = 2000) {
 
     //remove hide class on feedback for x seconds
@@ -52,33 +53,28 @@ function showFeedback(message, timeout = 2000) {
 
 }
 
-//timer
-//update the span-time for every passing second
-
+// Timer
 function startTimer() {
-    //show section - timer
+    // Show section - timer
     sectionTimer.classList.remove('hide')
-
-    //update the span-time for every passing second
+    
+    // Update the span-time for every passing second
     timerId = setInterval(function () {
         timeRemaining = timeRemaining - 1
         spanTime.textContent = timeRemaining
-
-        //if timer at 0
-        //what if user clicks nothing and timer expires?
-        //endgame
-
+        
+        // If timer at 0
+        // Endgame
         if (timeRemaining <= 0) {
-            //endgame
             endGame();
         }
-
-
+        
+        
     }, 1000);
 };
 
 
-
+// Show questions when quiz begins
 function showQuestion(index) {
     const question = questions[index]
 
@@ -113,7 +109,7 @@ function showQuestion(index) {
             console.log(typeof isCorrectChoice);
 
             if (isCorrectChoice) {
-                showFeedback('correct!!')
+                showFeedback('Correct!!')
             }
             //what if user clicks incorrect choice?
             //give feedback to say it's incorrect
@@ -128,7 +124,7 @@ function showQuestion(index) {
 
             //when user clicks final choice on final question
             //end game
-            if (index + 1 >= questions.length - 1) {
+            if (index >= questions.length - 1) {
                 // reached the final question
                 return endGame()
             }
@@ -143,22 +139,8 @@ function showQuestion(index) {
 }
 
 
-// question
-//title -- string
-//choices
-//title
-//is answer or not
+//ending the game
 
-
-
-
-
-
-//end game
-
-
-
-//end game
 function endGame() {
     //1 timer should stop counting
     clearInterval(timerId)
@@ -176,11 +158,6 @@ function endGame() {
 }
 
 
-//play again button
-
-//end game screen
-//1user can type in input box
-//do nothing
 
 formHighscore.addEventListener('submit', function (event) {
     event.preventDefault();
