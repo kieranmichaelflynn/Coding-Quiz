@@ -11,6 +11,10 @@
 
 To begin my quiz, simply press the 'Start' button and you will be faced with a series of questions that will come one after the other until all questions have been answered or until the timer runs out. You will be able to add your name at the end and enter the high-scores page. Be warned, your score will depend on how quickly you complete the quiz, and wrong answers will result in a time penalty! Try to get the highest score!!
 
+## Demo
+
+![Coding Quiz](./Demo.png)
+
 
 ## Access
 
